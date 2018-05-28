@@ -9,7 +9,7 @@ object municipio{
 class Club{
 	var _equiposDeportes = []
 	var _actividades = []
-	var property perfil =
+	var property perfil = 0
 	
 
 }
