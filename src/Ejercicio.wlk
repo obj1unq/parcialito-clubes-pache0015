@@ -11,7 +11,7 @@ class Club{
 	var _actividades = []
 	var property perfil =
 	
-	method evaluacion()
+
 }
 
 class Actividades{
