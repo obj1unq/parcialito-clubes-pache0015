@@ -90,10 +90,14 @@ class Club {
 	method removerDeTodo(jugador) {
 		_socios.remove(jugador)
 		self.listaDeActDeportivasSegunJugador(jugador).foreach({ _actividad => _actividad._plantel().remove(jugador)})
+		self.listaDeActSocialesSegunJugador(jugador).foreach({ _actividad => _actividad._sociosPArticipantes().remove(jugador)})
 	}
 
 	method listaDeActDeportivasSegunJugador(jugador) {
 		return _actividadesDeportivas.filter({ _actividad => _actividad._plantel().contains(jugador) })
+	}
+	method listaDeActSocialesSegunJugador(jugador) {
+		return _actividadesSociales.filter({ _actividad => _actividad._sociosParticipantes().contains(jugador) })
 	}
 
 	method sumarJugador(jugador) {
@@ -108,8 +112,7 @@ class Tradicional inherits Club {
 
 	var _perfil = "tradicional"
 
-	override method evaluacionBruta() { // =====================INCOMPLETO: Revisar
-		return super() - _gasto
+	override method evaluacionBruta() { 		return super() - _gasto
 	}
 
 }
