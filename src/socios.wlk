@@ -1,7 +1,6 @@
 import club.*
 import actividades.*
 
-
 class Socio {
 
 	var property _antiguedad = 0
